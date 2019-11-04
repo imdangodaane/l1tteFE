@@ -1,8 +1,8 @@
-<div class="navbar">
-  <div class="navbar__logo">
-    <h2>Latte-RO</h2>
+<div class="lnavbar">
+  <div class="lnavbar__logo">
+    <span>Latte-RO</span>
   </div>
-  <div class="navbar__header">
-    <span *ngFor="let header of headers">{{ header.name }}</span>
+  <div class="lnavbar__header">
+    <span *ngFor="let header of headers" (click)="navigateTo(header.url)">{{ header.name }}</span>
   </div>
 </div>

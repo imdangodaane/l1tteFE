@@ -1,8 +1,42 @@
-.navbar {
-  .navbar__logo {
+.lnavbar {
+  display: flex;
+  flex-flow: row nowrap;
 
+  .lnavbar__logo {
+    display: flex;
+    align-items: flex-end;
+
+    span {
+      font-size: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+      padding-right: 2rem;
+      padding-left: 1rem;
+    }
+
+    span:hover {
+      transform: scale(1.2);
+      color: blue;
+    }
   }
-  .navbar__header {
+  .lnavbar__header {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
 
+    span {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+      text-transform: uppercase;
+      padding-top: 0.5rem;
+    }
+
+    span:hover {
+      transform: scale(1.35);
+      color: blue;
+    }
   }
 }
