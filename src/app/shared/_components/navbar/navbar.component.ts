@@ -8,14 +8,13 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   headers = [
-    { name: 'Trang chủ', url: 'home'},
+    { name: 'Đăng ký', url: 'register'},
     { name: 'Tải game', url: 'download'},
     { name: 'Thông tin', url: 'information'},
     { name: 'Hỗ trợ', url: 'support'},
     { name: 'Tin tức', url: 'news'},
     { name: 'Diễn đàn', url: 'forums'},
     { name: 'Wiki', url: 'wiki'},
-    { name: 'Đăng ký', url: 'register'},
   ]
 
   constructor(
@@ -26,7 +25,7 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateTo(url) {
-    this.route.navigate(url);
+    this.route.navigate([url]);
   }
 
 }
