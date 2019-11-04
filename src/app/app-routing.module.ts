@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NbThemeModule } from '@nebular/theme';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NbThemeModule.forRoot(),
   ],
   exports: [
     RouterModule
