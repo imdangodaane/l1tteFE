@@ -11,6 +11,18 @@ import { NewsComponent } from './news/news.component';
 import { WikiComponent } from './wiki/wiki.component';
 import { RegisterComponent } from './register/register.component';
 import { ForumComponent } from './forum/forum.component';
+import { FormsModule } from '@angular/forms';
+import { 
+  NbInputModule,
+  NbCardModule,
+  NbDatepickerModule,
+  NbSpinnerModule,
+  NbToastrModule,
+  NbSelectModule,
+  NbCheckboxModule,
+  NbToggleModule,
+  NbButtonModule
+} from '@nebular/theme';
 
 
 @NgModule({
@@ -27,7 +39,18 @@ import { ForumComponent } from './forum/forum.component';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    FormsModule,
+    NbInputModule,
+    NbCardModule,
+    NbDatepickerModule,
+    NbSpinnerModule,
+    NbToastrModule,
+    NbSelectModule,
+    NbDatepickerModule,
+    NbCheckboxModule,
+    NbToggleModule,
+    NbButtonModule
   ]
 })
 export class PagesModule { }
