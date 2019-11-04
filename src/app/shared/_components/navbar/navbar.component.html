@@ -1,2 +1,8 @@
-<div>Navbar Component</div>
-<div class="nabar"></div>
+<div class="navbar">
+  <div class="navbar__logo">
+    <h2>Latte-RO</h2>
+  </div>
+  <div class="navbar__header">
+    <span *ngFor="let header of headers">{{ header.name }}</span>
+  </div>
+</div>
