@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPayload } from 'src/app/_models/login-payload';
+import { LoaderService } from '../../_services/loader.service';
+import { NbMenuService } from '@nebular/theme';
 
 @Component({
   selector: 'app-navbar',
@@ -23,13 +25,25 @@ export class NavbarComponent implements OnInit {
     userid: '',
     user_pass: ''
   };
+  userModel = {
+    name: 'nquizx',
+    title: 'Administrator'
+  }
+  user: any;
+  userMenu = [
+    { title: 'Thông tin tài khoản' },
+    { title: 'Đăng xuất' },
+  ]
 
   constructor(
     private route: Router,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public loaderService: LoaderService,
+    private nbMenuService: NbMenuService
   ) {}
 
   ngOnInit() {
+    this.loaderService.initLoader();
   }
 
   navigateTo(url) {
@@ -45,7 +59,12 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogin() {
-    console.log('===> Onlogin!');
+    this.loaderService.showLoader();
+    setTimeout(() => {
+      this.user = this.userModel;
+      this.closeModal();
+      this.loaderService.hideLoader();
+    }, 3000);
   }
 
 }

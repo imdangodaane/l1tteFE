@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './modules/pages/pages.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbToastrModule, NbAccordionModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbToastrModule, NbAccordionModule, NbMenuModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SharedComponentsModule } from './shared/_components/shared-components.module';
 
@@ -28,6 +28,7 @@ import { SharedComponentsModule } from './shared/_components/shared-components.m
     NbDatepickerModule.forRoot(),
     HttpClientModule,
     NbToastrModule.forRoot(),
+    NbMenuModule.forRoot()
   ],
   providers: [
 

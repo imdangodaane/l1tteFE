@@ -4,13 +4,21 @@
   </div>
   <div class="lnavbar__header">
     <span *ngFor="let header of headers" (click)="navigateTo(header.url)">{{ header.name }}</span>
-    <span (click)="openModal(loginModal)">Đăng nhập</span>
+    <nb-user size="medium"
+             name="nquizx"
+             title="Administrator"
+             color="#cccccc"
+             *ngIf="user"
+             [nbContextMenu]="userMenu"
+             nbContextMenuTrigger="hover">
+    </nb-user>
+    <span *ngIf="!user" (click)="openModal(loginModal)">Đăng nhập</span>
   </div>
 </div>
 
 <ng-template #loginModal let-modal>
   <form>
-    <nb-card>
+    <nb-card [nbSpinner]="loaderService.loading" nbSpinnerStatus="primary">
       <nb-card-header>
         <div class="login__header">
           <span>Đăng nhập</span>
