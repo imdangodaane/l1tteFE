@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
-import { NbCardModule, NbListModule } from '@nebular/theme';
+import { NbCardModule, NbListModule, NbInputModule, NbButtonModule } from '@nebular/theme';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +16,11 @@ import { NbCardModule, NbListModule } from '@nebular/theme';
   imports: [
     CommonModule,
     NbCardModule,
-    NbListModule
+    NbListModule,
+    NgbModalModule,
+    FormsModule,
+    NbInputModule,
+    NbButtonModule
   ],
   exports: [
     NavbarComponent,

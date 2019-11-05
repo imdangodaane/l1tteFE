@@ -1,8 +1,35 @@
 <div class="lnavbar">
   <div class="lnavbar__logo">
-    <span>Latte-RO</span>
+    <span (click)="navigateTo('home')">Latte-RO</span>
   </div>
   <div class="lnavbar__header">
     <span *ngFor="let header of headers" (click)="navigateTo(header.url)">{{ header.name }}</span>
+    <span (click)="openModal(loginModal)">Đăng nhập</span>
   </div>
 </div>
+
+<ng-template #loginModal let-modal>
+  <form>
+    <nb-card>
+      <nb-card-header>
+        <div class="login__header">
+          <span>Đăng nhập</span>
+          <img src="assets/svg/close.svg" alt="" (click)="closeModal()">
+        </div>
+      </nb-card-header>
+      <nb-card-body class="login__body">
+        <label for="userid">Tên tài khoản:</label>
+        <input type="text" nbInput [(ngModel)]="loginPayload.userid" name="userid" shape="round" status="primary" fullWidth placeholder="Username">
+        <label for="user_pass">Mật khẩu:</label>
+        <input type="password" nbInput [(ngModel)]="loginPayload.user_pass" name="user_pass" shape="round" status="primary" fullWidth placeholder="Password">
+      </nb-card-body>
+      <nb-card-footer class="login__footer">
+        <div class="login__more">
+          <a href="">Đăng ký tài khoản</a>
+          <a href="">Quên mật khẩu</a>
+        </div>
+        <button type="submit" nbButton status="primary" shape="semi-round" (click)="onLogin()">Đăng nhập</button>
+      </nb-card-footer>
+    </nb-card>
+  </form>
+</ng-template>

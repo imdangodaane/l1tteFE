@@ -1,10 +1,22 @@
-.news {
-  width: 70%;
-  max-width: 100%;
-  background-color: #ffe;
+.news-component {
+  display: flex;
+  flex-flow: row nowrap;
 
-  .my-app-post {
-    flex: 1 1 auto;
+  .news {
+    flex: 1 1 70%;
+    // width: 70%;
+    max-width: 70%;
+    background-color: #ffe;
+  
+    .my-app-post {
+      flex: 1 1 auto;
+    }
+  }
+  
+  .ads {
+    margin-left: 1rem;
+    flex: 1 1 30%;
+    max-width: 30%;
   }
 }
 

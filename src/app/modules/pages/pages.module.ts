@@ -23,8 +23,11 @@ import {
   NbToggleModule,
   NbButtonModule,
   NbAccordionModule,
-  NbListModule
+  NbListModule,
 } from '@nebular/theme';
+import {
+  NbMomentDateModule
+} from '@nebular/moment'
 
 
 @NgModule({
@@ -54,7 +57,8 @@ import {
     NbToggleModule,
     NbButtonModule,
     NbAccordionModule,
-    NbListModule
+    NbListModule,
+    NbMomentDateModule
   ]
 })
 export class PagesModule { }
