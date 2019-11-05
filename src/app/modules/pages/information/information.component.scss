@@ -1,0 +1,8 @@
+.server-info__basic-information {
+  display: flex;
+  flex-flow: column nowrap;
+
+  span {
+    line-height: 1.5rem;
+  }
+}

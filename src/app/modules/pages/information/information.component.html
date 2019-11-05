@@ -1,1 +1,26 @@
-<p>information works!</p>
+<nb-card>
+  <nb-card-header>
+    <span>Thông tin server</span>
+  </nb-card-header>
+  <nb-card-body>
+      <nb-accordion multi [nbSpinner]="loaderService.loading" nbSpinnerStatus="primary">
+          <nb-accordion-item [expanded]="true">
+            <nb-accordion-item-header>Thông tin cơ bản</nb-accordion-item-header>
+            <nb-accordion-item-body>
+              <div class="server-info__basic-information">
+                <span>Phiên bản (episode): </span>
+                <span>Max level: </span>
+                <span>Max stats: </span>
+                <span>Max ASPD: </span>
+              </div>
+            </nb-accordion-item-body>
+          </nb-accordion-item>
+          <nb-accordion-item [expanded]="true">
+            <nb-accordion-item-header>Tỉ lệ kinh nghiệm và vật phẩm</nb-accordion-item-header>
+            <nb-accordion-item-body>
+              <span>Kinh nghiệm</span>
+            </nb-accordion-item-body>
+          </nb-accordion-item>
+        </nb-accordion>
+  </nb-card-body>
+</nb-card>

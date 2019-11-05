@@ -9,5 +9,6 @@ export const API = {
   API_GAME: {
     API_DOWNLOAD_LINK_FULL: `${BASE_URL}/${PREFIX}/${DOWNLOAD}/full`,
     API_DOWNLOAD_LINK_PATCHER: `${BASE_URL}/${PREFIX}/${DOWNLOAD}/patcher`,
+    API_GET_SERVER_INFORMATION: `${BASE_URL}/${PREFIX}/server-information`
   }
 }
