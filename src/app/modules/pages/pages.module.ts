@@ -21,7 +21,8 @@ import {
   NbSelectModule,
   NbCheckboxModule,
   NbToggleModule,
-  NbButtonModule
+  NbButtonModule,
+  NbAccordionModule
 } from '@nebular/theme';
 
 
@@ -50,7 +51,8 @@ import {
     NbDatepickerModule,
     NbCheckboxModule,
     NbToggleModule,
-    NbButtonModule
+    NbButtonModule,
+    NbAccordionModule
   ]
 })
 export class PagesModule { }

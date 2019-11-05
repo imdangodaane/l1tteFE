@@ -13,7 +13,7 @@ export class AccountService {
   ) {}
 
   register(payload: RegisterAccount) {
-    const url = API.API_REGISTER;
+    const url = API.API_ACCOUNT.API_ACCOUNT_REGISTER;
     return this.http.post<any>(url, payload);
   }
 }
