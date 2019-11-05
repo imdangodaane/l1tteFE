@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PostComponent } from './post/post.component';
+import { NbCardModule, NbListModule } from '@nebular/theme';
 
 
 
 @NgModule({
   declarations: [
-    NavbarComponent
+    NavbarComponent,
+    PostComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NbCardModule,
+    NbListModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    PostComponent
   ]
 })
 export class SharedComponentsModule { }

@@ -1,0 +1,15 @@
+.news {
+  width: 70%;
+  max-width: 100%;
+  background-color: #ffe;
+
+  .my-app-post {
+    flex: 1 1 auto;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .news {
+    width: 100%;
+  }
+}

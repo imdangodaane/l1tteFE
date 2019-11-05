@@ -22,7 +22,8 @@ import {
   NbCheckboxModule,
   NbToggleModule,
   NbButtonModule,
-  NbAccordionModule
+  NbAccordionModule,
+  NbListModule
 } from '@nebular/theme';
 
 
@@ -52,7 +53,8 @@ import {
     NbCheckboxModule,
     NbToggleModule,
     NbButtonModule,
-    NbAccordionModule
+    NbAccordionModule,
+    NbListModule
   ]
 })
 export class PagesModule { }
