@@ -18,7 +18,7 @@ export class DownloadComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loaderService.initLoader();
+    // this.loaderService.initLoader();
     this.getDownloadLinkFull();
     this.getDownloadLinkPatcher();
   }

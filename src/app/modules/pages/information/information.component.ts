@@ -18,7 +18,7 @@ export class InformationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loaderService.initLoader();
+    // this.loaderService.initLoader();
     this.getServerInformation();
   }
 

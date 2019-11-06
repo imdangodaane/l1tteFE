@@ -31,8 +31,8 @@ export class NavbarComponent implements OnInit {
   }
   user: any;
   userMenu = [
-    { title: 'Thông tin tài khoản' },
-    { title: 'Đăng xuất' },
+    { title: 'Thông tin tài khoản', data: {id: 'account-info'} },
+    { title: 'Đăng xuất', data: {id: 'logout'} },
   ]
 
   constructor(
@@ -44,6 +44,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.loaderService.initLoader();
+    this.userMenuContextListener();
   }
 
   navigateTo(url) {
@@ -59,12 +60,28 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogin() {
-    this.loaderService.showLoader();
+    this.loaderService.showLoader('login');
     setTimeout(() => {
       this.user = this.userModel;
       this.closeModal();
       this.loaderService.hideLoader();
     }, 3000);
+  }
+
+  onLogout() {
+    this.user = null;
+  }
+
+  userMenuContextListener() {
+    this.nbMenuService.onItemClick().subscribe(event => {
+      switch(event.item.data.id) {
+        case 'logout':
+          this.onLogout();
+          break;
+        default:
+          console.log('===> Im listening to userMenuContext');
+      }
+    });
   }
 
 }

@@ -18,7 +18,7 @@
 
 <ng-template #loginModal let-modal>
   <form>
-    <nb-card [nbSpinner]="loaderService.loading" nbSpinnerStatus="primary">
+    <nb-card [nbSpinner]="loaderService.loadRef.login" nbSpinnerStatus="primary">
       <nb-card-header>
         <div class="login__header">
           <span>Đăng nhập</span>
