@@ -8,6 +8,10 @@ import { NewsComponent } from './news/news.component';
 import { ForumComponent } from './forum/forum.component';
 import { WikiComponent } from './wiki/wiki.component';
 import { RegisterComponent } from './register/register.component';
+import { AccountInfoComponent } from './account-info/account-info.component';
+import { ArticleComponent } from './article/article.component';
+import { NewPostComponent } from './new-post/new-post.component';
+import { PersonalPageComponent } from './personal-page/personal-page.component';
 
 
 const routes: Routes = [
@@ -46,6 +50,22 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'account-info',
+    component: AccountInfoComponent
+  },
+  {
+    path: 'article',
+    component: ArticleComponent
+  },
+  {
+    path: 'new-post',
+    component: NewPostComponent
+  },
+  {
+    path: 'personal-page',
+    component: PersonalPageComponent
   }
 ];
 

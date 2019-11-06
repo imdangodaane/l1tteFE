@@ -31,7 +31,9 @@ export class NavbarComponent implements OnInit {
   }
   user: any;
   userMenu = [
+    { title: 'Trang cá nhân', data: {id: 'personal-page'} },
     { title: 'Thông tin tài khoản', data: {id: 'account-info'} },
+    { title: 'Đăng bài viết', data: {id: 'new-post'} },
     { title: 'Đăng xuất', data: {id: 'logout'} },
   ]
 
@@ -75,11 +77,14 @@ export class NavbarComponent implements OnInit {
   userMenuContextListener() {
     this.nbMenuService.onItemClick().subscribe(event => {
       switch(event.item.data.id) {
+        // case 'personal-page':
+        //   this.navigateTo('person')
         case 'logout':
           this.onLogout();
           break;
         default:
-          console.log('===> Im listening to userMenuContext');
+          this.navigateTo(event.item.data.id);
+          // console.log('===> Im listening to userMenuContext');
       }
     });
   }

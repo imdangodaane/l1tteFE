@@ -15,7 +15,7 @@ export class PostComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.post) {
-      console.log(this.post);
+      // console.log(this.post);
     }
   }
 

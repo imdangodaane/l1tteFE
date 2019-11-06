@@ -27,7 +27,11 @@ import {
 } from '@nebular/theme';
 import {
   NbMomentDateModule
-} from '@nebular/moment'
+} from '@nebular/moment';
+import { PersonalPageComponent } from './personal-page/personal-page.component';
+import { AccountInfoComponent } from './account-info/account-info.component';
+import { NewPostComponent } from './new-post/new-post.component';
+import { ArticleComponent } from './article/article.component'
 
 
 @NgModule({
@@ -39,7 +43,11 @@ import {
     NewsComponent,
     WikiComponent,
     RegisterComponent,
-    ForumComponent
+    ForumComponent,
+    PersonalPageComponent,
+    AccountInfoComponent,
+    NewPostComponent,
+    ArticleComponent
   ],
   imports: [
     CommonModule,
