@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbToastrModule, NbAccordionModule, NbMenuModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SharedComponentsModule } from './shared/_components/shared-components.module';
+import { CKEditorModule } from 'ngx-ckeditor';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SharedComponentsModule } from './shared/_components/shared-components.m
     NbDatepickerModule.forRoot(),
     HttpClientModule,
     NbToastrModule.forRoot(),
-    NbMenuModule.forRoot()
+    NbMenuModule.forRoot(),
+    CKEditorModule
   ],
   providers: [
 

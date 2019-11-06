@@ -32,6 +32,7 @@ import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { ArticleComponent } from './article/article.component'
+import { CKEditorModule } from 'ngx-ckeditor';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { ArticleComponent } from './article/article.component'
     NbButtonModule,
     NbAccordionModule,
     NbListModule,
-    NbMomentDateModule
+    NbMomentDateModule,
+    CKEditorModule
   ]
 })
 export class PagesModule { }

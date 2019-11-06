@@ -858,6 +858,18 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@ckeditor/ckeditor5-angular@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-angular/-/ckeditor5-angular-1.1.2.tgz#54cce7ba27a023c983abb581a5ecf6fbb671223a"
+  integrity sha512-qIQD2fD2Lb8KDaZeJZF62N1otLyfLgVyAPT+CagoXvC6jXGyXovQxpaofttHB16+thC/oWx2SMBYXmEFWU8KSA==
+  dependencies:
+    tslib "^1.9.0"
+
+"@ckeditor/ckeditor5-build-decoupled-document@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-decoupled-document/-/ckeditor5-build-decoupled-document-15.0.0.tgz#7b9cdc7797bea3cff644ad4457d5d2912b79f7c6"
+  integrity sha512-0v9Xx7CWLcDY9gpo6eiW86h9E5ly/a+JxJuvh54f7FsfI8w/Gr18sgxHwWb/YsMChZF7aaNf1OKrgnkanfzd1w==
+
 "@nebular/date-fns@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@nebular/date-fns/-/date-fns-4.5.0.tgz#f4e833e5696b575c29c1d9815f43da77e42522e7"
@@ -2110,6 +2122,14 @@ circular-dependency-plugin@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/circular-dependency-plugin/-/circular-dependency-plugin-5.2.0.tgz#e09dbc2dd3e2928442403e2d45b41cea06bc0a93"
   integrity sha512-7p4Kn/gffhQaavNfyDFg7LS5S/UT1JAjyGd4UqR2+jzoYF02eDkj0Ec3+48TsIa4zghjLY87nQHIh/ecK9qLdw==
+
+ckeditor4-angular@^1.0.0-beta.2:
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/ckeditor4-angular/-/ckeditor4-angular-1.0.0-beta.2.tgz#bcbad51a5b7de9db9e3c9718dd10b3ed662fe8d4"
+  integrity sha512-fMAe2jMnf087eljy+aYK+AVVRJWxmEPHH5d7t/LiNJnZfEIEnp94jHN3E3QdJx0flrPzk5FifHBrpq4NMpC8Gw==
+  dependencies:
+    load-script "^1.0.0"
+    tslib "^1.9.0"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -4697,6 +4717,11 @@ lie@~3.3.0:
   dependencies:
     immediate "~3.0.5"
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
+
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
@@ -5140,6 +5165,13 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+
+ngx-ckeditor@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-ckeditor/-/ngx-ckeditor-8.0.0.tgz#9c4180eea0a513ad81c028e84b10f4f5312a7bcf"
+  integrity sha512-B9eddnGqQ1Aq/vSfPddT9o2fFIu6CgwKWbmTzmLWNazxEZ+F3cRJj0jbIeSKDNERVLzRRRxn/7q9w+kFszTXHQ==
+  dependencies:
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
