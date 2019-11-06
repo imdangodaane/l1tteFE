@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Directive, ViewChild } from '@angular/core';
+
+@Directive({
+  selector: '.img-close'
+})
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+  showHomepageNotice = true;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closeNotice() {
+    this.showHomepageNotice = false;
   }
 
 }

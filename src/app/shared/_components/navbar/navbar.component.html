@@ -18,7 +18,7 @@
 
 <ng-template #loginModal let-modal>
   <form>
-    <nb-card [nbSpinner]="loaderService.loadRef.login" nbSpinnerStatus="primary">
+    <nb-card class="login__component" [nbSpinner]="loaderService.loadRef.login" nbSpinnerStatus="primary">
       <nb-card-header>
         <div class="login__header">
           <span>Đăng nhập</span>
@@ -33,10 +33,30 @@
       </nb-card-body>
       <nb-card-footer class="login__footer">
         <div class="login__more">
-          <a href="">Đăng ký tài khoản</a>
-          <a href="">Quên mật khẩu</a>
+          <a [routerLink]="['register']" (click)="closeModal()">Đăng ký tài khoản</a>
+          <a [routerLink]="" (click)="openModal(resetPasswordModal)">Quên mật khẩu</a>
         </div>
         <button type="submit" nbButton status="primary" shape="semi-round" (click)="onLogin()">Đăng nhập</button>
+      </nb-card-footer>
+    </nb-card>
+  </form>
+</ng-template>
+
+<ng-template #resetPasswordModal let-modal>
+  <form>
+    <nb-card class="resetPW__component">
+      <nb-card-header>
+        <div class="resetPW__header">
+          <span>Quên mật khẩu</span>
+          <img src="assets/svg/close.svg" alt="" (click)="closeModal()">
+        </div>
+      </nb-card-header>
+      <nb-card-body class="resetPW__body">
+        <label for="emailResetPW">Nhập địa chỉ email để có thể reset password:</label>
+        <input type="email" nbInput [(ngModel)]="emailResetPW" name="emailResetPW" shape="round" status="primary" fullWidth placeholder="Email">
+      </nb-card-body>
+      <nb-card-footer class="resetPW__footer">
+        <button type="submit" nbButton status="primary" shape="round" fullWidth (click)="onSubmitResetPW()">Gửi</button>
       </nb-card-footer>
     </nb-card>
   </form>

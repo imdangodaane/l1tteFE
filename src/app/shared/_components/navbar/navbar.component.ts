@@ -36,6 +36,7 @@ export class NavbarComponent implements OnInit {
     { title: 'Đăng bài viết', data: {id: 'new-post'} },
     { title: 'Đăng xuất', data: {id: 'logout'} },
   ]
+  emailResetPW = '';
 
   constructor(
     private route: Router,
@@ -54,11 +55,16 @@ export class NavbarComponent implements OnInit {
   }
 
   openModal(content) {
+    this.closeModal();
     this.openingModal = this.modalService.open(content);
   }
 
   closeModal() {
-    this.openingModal.dismiss();
+    try {
+      this.openingModal.close();
+    } catch (err) {
+      return;
+    }
   }
 
   onLogin() {
@@ -67,7 +73,7 @@ export class NavbarComponent implements OnInit {
       this.user = this.userModel;
       this.closeModal();
       this.loaderService.hideLoader();
-    }, 3000);
+    }, 1500);
   }
 
   onLogout() {
@@ -87,6 +93,10 @@ export class NavbarComponent implements OnInit {
           // console.log('===> Im listening to userMenuContext');
       }
     });
+  }
+
+  onSubmitResetPW() {
+    console.log('Im reseting my password!')
   }
 
 }

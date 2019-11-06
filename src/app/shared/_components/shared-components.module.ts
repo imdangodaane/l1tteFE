@@ -5,6 +5,7 @@ import { PostComponent } from './post/post.component';
 import { NbCardModule, NbListModule, NbInputModule, NbButtonModule, NbUserModule, NbContextMenuModule, NbSpinnerModule, NbMenuModule } from '@nebular/theme';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     NbUserModule,
     NbContextMenuModule,
     NbSpinnerModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,
