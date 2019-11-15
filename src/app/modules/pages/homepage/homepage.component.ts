@@ -1,9 +1,5 @@
 import { Component, OnInit, Directive, ViewChild } from '@angular/core';
 
-@Directive({
-  selector: '.img-close'
-})
-
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',

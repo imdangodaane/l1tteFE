@@ -11,6 +11,8 @@ import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbT
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SharedComponentsModule } from './shared/_components/shared-components.module';
 import { CKEditorModule } from 'ngx-ckeditor';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { CKEditorModule } from 'ngx-ckeditor';
     HttpClientModule,
     NbToastrModule.forRoot(),
     NbMenuModule.forRoot(),
-    CKEditorModule
+    CKEditorModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
 
