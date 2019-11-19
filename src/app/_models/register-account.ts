@@ -1,6 +1,6 @@
 export class RegisterAccount {
   userid: string;
-  userpass: string;
+  user_pass: string;
   email: string;
   sex: string;
   birthdate: string;

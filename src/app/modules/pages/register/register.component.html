@@ -15,15 +15,15 @@
 
       <label for="userpass">Mật khẩu:</label>
       <input type="password" name="userpass" nbInput shape="round" fullWidth 
-             [(ngModel)]="registerPayload.userpass"
-             status="{{registerPayload.userpass.length >= 4 && registerPayload.userid.length < 26 ? 'success' : 'danger'}}"
+             [(ngModel)]="registerPayload.user_pass"
+             status="{{registerPayload.user_pass.length >= 4 && registerPayload.userid.length < 26 ? 'success' : 'danger'}}"
              placeholder="Password"
              >
 
       <label for="re-userpass">Xác nhận mật khẩu:</label>
       <input type="password" name="re-userpass" nbInput shape="round" fullWidth 
              [(ngModel)]="reUserpass"
-             status="{{registerPayload.userpass === reUserpass ? 'success' : 'danger'}}"
+             status="{{registerPayload.user_pass === reUserpass ? 'success' : 'danger'}}"
              placeholder="Confirm Password"
              >
 
@@ -45,7 +45,7 @@
              [nbDatepicker]="birthdatepicker"
              placeholder="Birthdate"
              >
-      <nb-datepicker #birthdatepicker format="dd/MM/yyyy"></nb-datepicker>
+      <nb-datepicker #birthdatepicker format="DD/MM/YYYY"></nb-datepicker>
     </div>
   </nb-card-body>
   <nb-card-footer class="register-card__footer">

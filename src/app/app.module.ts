@@ -8,6 +8,7 @@ import { PagesModule } from './modules/pages/pages.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbToastrModule, NbAccordionModule, NbMenuModule } from '@nebular/theme';
+import { NbMomentDateModule } from '@nebular/moment';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SharedComponentsModule } from './shared/_components/shared-components.module';
 import { CKEditorModule } from 'ngx-ckeditor';
@@ -33,7 +34,8 @@ import { environment } from '../environments/environment';
     NbToastrModule.forRoot(),
     NbMenuModule.forRoot(),
     CKEditorModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    NbMomentDateModule
   ],
   providers: [
 
