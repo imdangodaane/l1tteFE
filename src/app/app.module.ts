@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './modules/pages/pages.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbToastrModule, NbAccordionModule, NbMenuModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbDatepickerModule, NbToastrService, NbToastrModule, NbAccordionModule, NbMenuModule, NbCardModule } from '@nebular/theme';
 import { NbMomentDateModule } from '@nebular/moment';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SharedComponentsModule } from './shared/_components/shared-components.module';
@@ -17,7 +17,7 @@ import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,8 @@ import { environment } from '../environments/environment';
     NbMenuModule.forRoot(),
     CKEditorModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    NbMomentDateModule
+    NbMomentDateModule,
+    NbCardModule,
   ],
   providers: [
 

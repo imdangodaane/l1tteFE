@@ -1,6 +1,9 @@
 <div class="lnavbar">
   <div class="lnavbar__logo">
-    <span (click)="navigateTo('home')">Latte-RO</span>
+    <span (click)="navigateTo('home')">
+      <!-- <img src="assets/images/favicon2.webp" alt=""> -->
+      <img src="assets/images/brand2.webp" alt="">
+    </span>
   </div>
   <div class="lnavbar__header">
     <span *ngFor="let header of headers" (click)="navigateTo(header.url)">{{ header.name }}</span>

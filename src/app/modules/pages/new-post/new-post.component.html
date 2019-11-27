@@ -6,8 +6,8 @@
     <nb-card>
       <nb-card-header>
         <div class="editor__header">
-          <input type="text" nbInput fullWidth placeholder="Tiêu đề bài đăng">
-          <input type="text" nbInput fullWidth placeholder="URL banner (nếu có) VD: https://photos.animetvn.tv/upload/film_big/q95DBfp.png">
+          <input [(ngModel)]="post.title" type="text" nbInput fullWidth placeholder="Tiêu đề bài đăng">
+          <input [(ngModel)]="post.banner_url" type="text" nbInput fullWidth placeholder="URL banner (nếu có) VD: https://photos.animetvn.tv/upload/film_big/q95DBfp.png">
           <div class="badges-picking">
             <span>Tags:</span>
             <nb-checkbox [(checked)]="post.badges.news" status="primary"><span class="text-primary">News</span></nb-checkbox>
@@ -20,10 +20,14 @@
       </nb-card-header>
       <nb-card-body>
         <div class="editor__body">
-          <span>Body</span>
-          <ck-editor class="my-ckeditor" #myCkeditor></ck-editor>
+          <ck-editor class="my-ckeditor" [(ngModel)]="innerValue" #myCkeditor></ck-editor>
         </div>
       </nb-card-body>
+      <nb-card-footer>
+        <div class="editor__footer">
+          <button type="button" nbButton shape="round" (click)="onSubmitNewPost()">Đăng bài</button>
+        </div>
+      </nb-card-footer>
     </nb-card>
   </nb-card-body>
 </nb-card>
@@ -31,5 +35,7 @@
 <nb-card>
   <nb-card-body>
     <span>Xem trước</span>
+    <hr>
+    <div [innerHTML]="this.innerValue | safeHtml"></div>
   </nb-card-body>
 </nb-card>

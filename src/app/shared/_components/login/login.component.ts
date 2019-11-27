@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
       this.loginState.emit(this.userModel);
       this.closeModal();
       this.loaderService.hideLoader();
-    }, 1000);
+    }, 500);
   }
 
 }

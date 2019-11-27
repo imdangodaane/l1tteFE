@@ -31,8 +31,10 @@ import {
 import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
 import { NewPostComponent } from './new-post/new-post.component';
-import { ArticleComponent } from './article/article.component'
 import { CKEditorModule } from 'ngx-ckeditor';
+import { PipesModule } from '@shared/_pipes/pipes.module';
+import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
+import { CreateArticleComponent } from './article/create-article/create-article.component';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import { CKEditorModule } from 'ngx-ckeditor';
     PersonalPageComponent,
     AccountInfoComponent,
     NewPostComponent,
-    ArticleComponent
+    ArticleDetailComponent,
+    CreateArticleComponent
   ],
   imports: [
     CommonModule,
@@ -68,7 +71,8 @@ import { CKEditorModule } from 'ngx-ckeditor';
     NbAccordionModule,
     NbListModule,
     NbMomentDateModule,
-    CKEditorModule
+    CKEditorModule,
+    PipesModule,
   ]
 })
 export class PagesModule { }

@@ -13,5 +13,10 @@ export const API = {
     API_DOWNLOAD_LINK_FULL: `${BASE_URL}/${PREFIX}/${DOWNLOAD}/link-full`,
     API_DOWNLOAD_LINK_PATCHER: `${BASE_URL}/${PREFIX}/${DOWNLOAD}/link-patch`,
     API_GET_SERVER_INFORMATION: `${BASE_URL}/${PREFIX}/server-information`
+  },
+  API_ARTICLE: {
+    API_ARTICLE: `${BASE_URL}/${PREFIX}/article`,
+    API_GET_ARTICLE_BY_ID: `${BASE_URL}/${PREFIX}/article/__articleId`,
+    API_GET_ARTICLE_BY_SLUG: `${BASE_URL}/${PREFIX}/article/__articleSlug`,
   }
 }
