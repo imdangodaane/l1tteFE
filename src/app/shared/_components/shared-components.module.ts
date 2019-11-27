@@ -2,17 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
-import { NbCardModule, NbListModule, NbInputModule, NbButtonModule, NbUserModule, NbContextMenuModule, NbSpinnerModule, NbMenuModule } from '@nebular/theme';
+import {
+  NbCardModule,
+  NbListModule,
+  NbInputModule,
+  NbButtonModule,
+  NbUserModule,
+  NbContextMenuModule,
+  NbSpinnerModule,
+} from '@nebular/theme';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { LoginComponent } from './login/login.component';
+import { ResetpwComponent } from './resetpw/resetpw.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    PostComponent
+    PostComponent,
+    LoginComponent,
+    ResetpwComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +40,9 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     NavbarComponent,
-    PostComponent
+    PostComponent,
+    LoginComponent,
+    ResetpwComponent,
   ]
 })
 export class SharedComponentsModule { }

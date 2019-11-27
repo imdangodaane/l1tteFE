@@ -11,6 +11,12 @@ import { NbMenuService } from '@nebular/theme';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  user: LoginPayload;
+  openingModal: NgbModalRef;
+  loginPayload: LoginPayload = {
+    userid: '',
+    user_pass: ''
+  };
   headers = [
     { name: 'Đăng ký', url: 'register'},
     { name: 'Tải game', url: 'download'},
@@ -20,16 +26,10 @@ export class NavbarComponent implements OnInit {
     { name: 'Diễn đàn', url: 'forum'},
     { name: 'Wiki', url: 'wiki'},
   ]
-  openingModal: NgbModalRef;
-  loginPayload: LoginPayload = {
-    userid: '',
-    user_pass: ''
-  };
   userModel = {
     name: 'nquizx',
     title: 'Administrator'
   }
-  user: any;
   userMenu = [
     { title: 'Trang cá nhân', data: {id: 'personal-page'} },
     { title: 'Thông tin tài khoản', data: {id: 'account-info'} },
@@ -62,18 +62,7 @@ export class NavbarComponent implements OnInit {
   closeModal() {
     try {
       this.openingModal.close();
-    } catch (err) {
-      return;
-    }
-  }
-
-  onLogin() {
-    this.loaderService.showLoader('login');
-    setTimeout(() => {
-      this.user = this.userModel;
-      this.closeModal();
-      this.loaderService.hideLoader();
-    }, 1500);
+    } catch (e) {}
   }
 
   onLogout() {
@@ -82,21 +71,21 @@ export class NavbarComponent implements OnInit {
 
   userMenuContextListener() {
     this.nbMenuService.onItemClick().subscribe(event => {
+      console.log("TCL: NavbarComponent -> userMenuContextListener -> event", event)
       switch(event.item.data.id) {
-        // case 'personal-page':
-        //   this.navigateTo('person')
         case 'logout':
           this.onLogout();
           break;
         default:
           this.navigateTo(event.item.data.id);
-          // console.log('===> Im listening to userMenuContext');
+          break;
       }
     });
   }
 
-  onSubmitResetPW() {
-    console.log('Im reseting my password!')
+  loginHandler(event: any) {
+    this.user = event;
+    console.log("TCL: NavbarComponent -> loginHandler -> event", event);
   }
 
 }

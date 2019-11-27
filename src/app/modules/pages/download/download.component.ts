@@ -18,7 +18,6 @@ export class DownloadComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.loaderService.initLoader();
     this.getDownloadLinkFull();
     this.getDownloadLinkPatcher();
   }
@@ -28,7 +27,7 @@ export class DownloadComponent implements OnInit {
     this.gameService.getDownloadLinkFULL().subscribe(
       res => {
         this.loaderService.hideLoader();
-        this.linkGameFull = res;
+        this.linkGameFull = res.data;
       },
       err => {
         this.loaderService.hideLoader();
@@ -44,7 +43,7 @@ export class DownloadComponent implements OnInit {
     this.gameService.getDownloadLinkPatcher().subscribe(
       res => {
         this.loaderService.hideLoader();
-        this.linkGamePatcher = res;
+        this.linkGamePatcher = res.data;
       },
       err => {
         this.loaderService.hideLoader();
