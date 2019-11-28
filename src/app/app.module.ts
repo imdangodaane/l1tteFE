@@ -14,6 +14,8 @@ import { SharedComponentsModule } from './shared/_components/shared-components.m
 import { CKEditorModule } from 'ngx-ckeditor';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { JwtModule } from '@auth0/angular-jwt';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,12 @@ import { environment } from '../environments/environment';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     NbMomentDateModule,
     NbCardModule,
+    JwtModule.forRoot({
+      config: {}
+    }),
   ],
   providers: [
-
+    CookieService
   ],
   bootstrap: [
     AppComponent

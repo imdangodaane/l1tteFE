@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
       ) {
         this.accountService.register(this.registerPayload).subscribe(
           res => {
-            this.toastrService.success('Đăng ký tài khoản thành công', 'Thành công');
+            this.toastrService.success('Đăng ký tài khoản thành công', 'Đăng ký thành công');
             setTimeout(() => {
               this.router.navigate(['']);
             }, 1500);
@@ -51,14 +51,14 @@ export class RegisterComponent implements OnInit {
           err => {
             if (this.debug === true) { console.error(err) }
             if (err.error.status === 'existed') {
-              this.toastrService.danger('Tên tài khoản hoặc email đã tồn tại', 'Thất bại');
+              this.toastrService.danger('Tên tài khoản hoặc email đã tồn tại', 'Đăng ký thất bại');
             } else {
-              this.toastrService.danger('Lỗi không xác định, vui lòng liên hệ admin để xử lý', 'Thất bại');
+              this.toastrService.danger('Lỗi không xác định, vui lòng liên hệ admin để xử lý', 'Đăng ký thất bại');
             }
           }
         );
       } else {
-        this.toastrService.danger('Bạn chưa điền đầy đủ hoặc sai thông tin', 'Thất bại');
+        this.toastrService.danger('Bạn chưa điền đầy đủ hoặc sai thông tin', 'Đăng ký thất bại');
       }
   }
 

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { LoginPayload } from 'src/app/_models/login-payload';
 import { LoaderService } from '../../_services/loader.service';
 import { NbMenuService } from '@nebular/theme';
+import { CookieService } from 'ngx-cookie-service';
+import { AccountService } from '@shared/_services/account.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,12 +12,9 @@ import { NbMenuService } from '@nebular/theme';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  user: LoginPayload;
+  debug = true;
+  user: string;
   openingModal: NgbModalRef;
-  loginPayload: LoginPayload = {
-    userid: '',
-    user_pass: ''
-  };
   headers = [
     { name: 'Đăng ký', url: 'register'},
     { name: 'Tải game', url: 'download'},
@@ -36,18 +34,31 @@ export class NavbarComponent implements OnInit {
     { title: 'Đăng bài viết', data: {id: 'new-post'} },
     { title: 'Đăng xuất', data: {id: 'logout'} },
   ]
-  emailResetPW = '';
 
   constructor(
     private route: Router,
     private modalService: NgbModal,
     public loaderService: LoaderService,
-    private nbMenuService: NbMenuService
+    private nbMenuService: NbMenuService,
+    private cookieService: CookieService,
+    private accountService: AccountService,
   ) {}
 
   ngOnInit() {
     this.loaderService.initLoader();
     this.userMenuContextListener();
+    this.getCurrentUser();
+  }
+
+  getCurrentUser() {
+    this.accountService.getCurrentUser().subscribe(
+      res => {
+        this.user = res;
+      },
+      err => {
+        if (this.debug === true) console.error(err);
+      }
+    );
   }
 
   navigateTo(url) {
@@ -66,12 +77,11 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogout() {
-    this.user = null;
+    this.user = this.accountService.logout();
   }
 
   userMenuContextListener() {
     this.nbMenuService.onItemClick().subscribe(event => {
-      console.log("TCL: NavbarComponent -> userMenuContextListener -> event", event)
       switch(event.item.data.id) {
         case 'logout':
           this.onLogout();
@@ -84,8 +94,10 @@ export class NavbarComponent implements OnInit {
   }
 
   loginHandler(event: any) {
-    this.user = event;
-    console.log("TCL: NavbarComponent -> loginHandler -> event", event);
+    console.log("TCL: loginHandler -> event", event)
+    if (event === 'logged-in') {
+      this.user = this.cookieService.get('token');
+    }
   }
 
 }
