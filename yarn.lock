@@ -927,6 +927,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@nebular/bootstrap@^4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@nebular/bootstrap/-/bootstrap-4.6.0.tgz#8bf54536c1feb9a990befdfbc38477d2e4cabd5a"
+  integrity sha512-Y84vSmcHCHGeJHENtmx+996q7GjRz/exnQHU36pyV3iAJs98dOjegb/qjh0KZXeMEsVtlpXzfPoI+Qudpt4B8Q==
+
 "@nebular/date-fns@^4.5.0":
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@nebular/date-fns/-/date-fns-4.6.0.tgz#0fb1a96c3272e154ad50ee1c14fd0c1cb8dfb16a"
