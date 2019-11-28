@@ -136,12 +136,10 @@
     ora "4.0.2"
     rxjs "6.5.3"
 
-"@angular/animations@^8.2.14":
-  version "8.2.14"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.2.14.tgz#76736b21e56165e6ca4925fb69605bdcc56aba7d"
-  integrity sha512-3Vc9TnNpKdtvKIXcWDFINSsnwgEMiDmLzjceWg1iYKwpeZGQahUXPoesLwQazBMmxJzQiA4HOMj0TTXKZ+Jzkg==
-  dependencies:
-    tslib "^1.9.0"
+"@angular/animations@^9.0.0-rc.4":
+  version "9.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.0.0-rc.4.tgz#887523a020e0873085c5cf051e7d07c7c0a0091d"
+  integrity sha512-UoQ3YBGoFCTr7+JTqLsAb01CtD30sSZLU8PhYpg1534zo+1+twuPuAc1fpLRvvpMP7ifbV2yBpz9tFoDUU3T0A==
 
 "@angular/cdk@^8.2.3":
   version "8.2.3"
@@ -219,10 +217,10 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-9.0.0-rc.4.tgz#4b992447427a85b07014e6903270f80e42829fa2"
   integrity sha512-xIB0EDUAR6qJgXHfQ4lO+DoJ/IvJ+La3I+bYe5hX8gxZHHuFCsOd0dpDmI8ylG02UQgP4aqVOk2zAADdWd4WTw==
 
-"@angular/localize@^9.0.0-rc.0":
-  version "9.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular/localize/-/localize-9.0.0-rc.0.tgz#4b0291cd378c1a46a779b43420d38d00ab81ab16"
-  integrity sha512-u9il64ZW55YJ4mAWF1wHdF4NLAFik9eNckKRVekIMK3b/jM+SD94u9vhgIfJxP9WhZNaYyr9G4o2HVZzCYiY9w==
+"@angular/localize@^9.0.0-rc.4":
+  version "9.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@angular/localize/-/localize-9.0.0-rc.4.tgz#c9d1fd47f148c7b6720b460b42bf8e8a3665baf0"
+  integrity sha512-SoRmhpgbdM1JP8iJg3TL678EhwaeLYkZ7O7r8Fu4g0bMb3prH6P1MSDR8NwleBpBAEs5gdh5lH2dseX4dnucCA==
   dependencies:
     "@babel/core" "^7.5.5"
     glob "7.1.2"
