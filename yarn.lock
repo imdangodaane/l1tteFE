@@ -946,11 +946,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-build-decoupled-document@^15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-decoupled-document/-/ckeditor5-build-decoupled-document-15.0.0.tgz#7b9cdc7797bea3cff644ad4457d5d2912b79f7c6"
-  integrity sha512-0v9Xx7CWLcDY9gpo6eiW86h9E5ly/a+JxJuvh54f7FsfI8w/Gr18sgxHwWb/YsMChZF7aaNf1OKrgnkanfzd1w==
-
 "@nebular/date-fns@^4.5.0":
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@nebular/date-fns/-/date-fns-4.6.0.tgz#0fb1a96c3272e154ad50ee1c14fd0c1cb8dfb16a"
