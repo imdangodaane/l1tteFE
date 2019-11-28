@@ -234,14 +234,14 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.0.0-rc.4.tgz#70d5e0e60aad65c3fff10e81b8bdab6f4977acdb"
   integrity sha512-GqeBhGId+p72+/wE8fK4K2nJXtwCS3jYB/GZzvwMad2b1odMEL00jfPjLFP+FC1kMnQJjYKJV68R19y29Qx/2w==
 
-"@angular/pwa@^0.803.19":
-  version "0.803.20"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.20.tgz#47231cdcd0cc107e6b692406d5bcfcb7a2ed9a05"
-  integrity sha512-AcgRzOI/So7LyaxDF6R0bwTAh3604+6on3rwN92SYQtFcLMkUfZ1Stwbei5rrrU5SxCyx1njx4312fnOhVDR6A==
+"@angular/pwa@^0.900.0-rc.4":
+  version "0.900.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.900.0-rc.4.tgz#cbc7efc2b7220153b2a9cf6eeab142f74b00bd13"
+  integrity sha512-zzlXNZxHF16KpLbOqz+AqYqdE1mu+wElKyxZdwnGVI/pbdMlMy0kcnyGvmz42B/189C1KCIw5D7Ugln9uEPq2Q==
   dependencies:
-    "@angular-devkit/core" "8.3.20"
-    "@angular-devkit/schematics" "8.3.20"
-    "@schematics/angular" "8.3.20"
+    "@angular-devkit/core" "9.0.0-rc.4"
+    "@angular-devkit/schematics" "9.0.0-rc.4"
+    "@schematics/angular" "9.0.0-rc.4"
     parse5-html-rewriting-stream "5.1.0"
 
 "@angular/router@~9.0.0-rc.2":
@@ -997,14 +997,6 @@
     rxjs "6.5.3"
     webpack-sources "1.4.3"
 
-"@schematics/angular@8.3.20", "@schematics/angular@~8.3.17":
-  version "8.3.20"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.20.tgz#737d0a73e891446899a2267c4cc348b6c5a78ca8"
-  integrity sha512-Y20pSJhQ0KQd8Tk2kPQlmpRDNDaoIKMeOOGLT2FgCFrumxZXuIbBgN9fGDgW40iI2sq80bccOeo24RKkn3QpcA==
-  dependencies:
-    "@angular-devkit/core" "8.3.20"
-    "@angular-devkit/schematics" "8.3.20"
-
 "@schematics/angular@9.0.0-rc.4":
   version "9.0.0-rc.4"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-9.0.0-rc.4.tgz#538b941c7c47a971f2067679bfada39544c3757c"
@@ -1012,6 +1004,14 @@
   dependencies:
     "@angular-devkit/core" "9.0.0-rc.4"
     "@angular-devkit/schematics" "9.0.0-rc.4"
+
+"@schematics/angular@~8.3.17":
+  version "8.3.20"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.20.tgz#737d0a73e891446899a2267c4cc348b6c5a78ca8"
+  integrity sha512-Y20pSJhQ0KQd8Tk2kPQlmpRDNDaoIKMeOOGLT2FgCFrumxZXuIbBgN9fGDgW40iI2sq80bccOeo24RKkn3QpcA==
+  dependencies:
+    "@angular-devkit/core" "8.3.20"
+    "@angular-devkit/schematics" "8.3.20"
 
 "@schematics/update@0.900.0-rc.4":
   version "0.900.0-rc.4"
