@@ -34,7 +34,7 @@
     "ckeditor4-angular": "^1.0.0-beta.2",
     "eva-icons": "^1.1.1",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "ngx-ckeditor": "^8.0.0",
     "ngx-cookie-service": "^2.2.0",
     "popper.js": "^2.0.0-next.4",
